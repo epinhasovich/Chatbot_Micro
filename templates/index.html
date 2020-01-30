@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        #bot {
+        height: 500px;
+        width: 500px;
+        }
+
+        #container {
+        align-items: center;
+        display: flex;
+        }
+    </style>
+
+    <title>Micro Chatbot</title>
+</head>
+<body>
+
+<div id="container">
+
+    <img id="bot" src="https://gifimage.net/wp-content/uploads/2018/04/robot-dance-gif-12.gif">
+
+    <h2>Send a message to one of my BOT friends...</h2>
+    <input id="userInput" type="text" name="message">
+    <button id="submit" type="button">Send</button>
+<!--    <span>Here is my friends message...</span>-->
+<!--    <h3 id="friendmsg"></h3>-->
+
+</div>
+
+
+<script>
+    let userInput = document.getElementById("userInput");
+    let submit = document.getElementById("submit");
+    submit.addEventListener("click" , function (){
+    fetch('/message/?message=' + userInput.value)})
+
+<!--could not get it to work-->
+<!--    .then(response => response.json().then(json => {-->
+<!--    let friendmsg = document.getElementById('friendmsg')-->
+<!--    friendmsg.append = json.message}))-->
+<!--    });-->
+</script>
+</body>
+</html>
