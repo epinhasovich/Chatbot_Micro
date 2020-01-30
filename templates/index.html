@@ -26,6 +26,7 @@
     <h2>Send a message to one of my BOT friends...</h2>
     <input id="userInput" type="text" name="message">
     <button id="submit" type="button">Send</button>
+
 <!--    <span>Here is my friends message...</span>-->
 <!--    <h3 id="friendmsg"></h3>-->
 
@@ -38,7 +39,7 @@
     submit.addEventListener("click" , function (){
     fetch('/message/?message=' + userInput.value)})
 
-<!--could not get it to work-->
+<!--could not get it to work. wanted to display the other bot's message on my screen but it can only be viewed in terminal-->
 <!--    .then(response => response.json().then(json => {-->
 <!--    let friendmsg = document.getElementById('friendmsg')-->
 <!--    friendmsg.append = json.message}))-->

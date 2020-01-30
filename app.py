@@ -5,14 +5,16 @@ import requests
 import json
 
 
-responses = ("Yooooooo", "Holla", "Sup?", "The sky is blue", "Let's get Schwifty", "Wubba Lubba Dub Dub")
 
+
+
+# communicating with other bots w/ front-end
 app = Flask(__name__)
 @app.route("/")
 def home():
     return render_template("index.html")
 
-# communicating with other bots w/ front-end
+
 @app.route("/message/", methods=["GET"])
 def message():
     if request.method == "GET":
@@ -30,7 +32,8 @@ def message():
         return "FAIL"
 
 
-# communicating with other bots
+# Communicating with other bots
+#
 # app = Flask(__name__)
 # @app.route("/message/")
 # def message():
@@ -47,7 +50,8 @@ def message():
 #         return "Say Something in my URL for me to respond!"
 
 
-# parrot
+# PARROT
+#
 # app = Flask(__name__)
 # @app.route("/message/")
 # def message():
@@ -55,7 +59,10 @@ def message():
 #     return message
 
 
-# drunk chat
+# DRUNK BOT
+#
+# responses = ("Yooooooo", "Holla", "Sup?", "The sky is blue", "Let's get Schwifty", "Wubba Lubba Dub Dub")
+#
 # app = Flask(__name__)
 # @app.route("/message/")
 # def message():
@@ -65,7 +72,8 @@ def message():
 #     return "Say Something in my URL"
 
 
-# broken record
+# BROKEN RECORD
+#
 # app = Flask(__name__)
 # @app.route("/message/")
 # def message():
